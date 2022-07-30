@@ -1,10 +1,15 @@
 
 # 프로젝트 정보
 ---
+
 **Project Name: portfolio**
+
 **project excution period: 2022.07.10 ~ 프로젝트를 만들 때마다**
+
 **site: <a href="https://kipsportfoliosite.netlify.app/">포트폴리오 사이트</a>**
+
 **editor: vscode**
+
 ---
 
 # 프로젝트 설명
