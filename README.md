@@ -32,8 +32,8 @@
 
 - 다크모드/화이트모드를 도입했습니다.
 
-1.새로고침 시에 적용되지 않는문제 -> localStorage에 색을 담았다가, 새로고침시에는 상태가 유지되게끔 구현할 예정입니다.
-2.현재 body태그가 아닌 wrapper태그에 background를 변경시켜 scale을 110%로 늘리면 사이드쪽 background 적용이 안되고 있습니다.
+1. 새로고침 시에 적용되지 않는문제 -> localStorage에 색을 담았다가, 새로고침시에는 상태가 유지되게끔 구현할 예정입니다.
+2. 현재 body태그가 아닌 wrapper태그에 background를 변경시켜 scale을 110%로 늘리면 사이드쪽 background 적용이 안되고 있습니다.
 -> body태그로 background설정 후 개별적인 item들에 대해 배경색을 적용.
 
 - 폰트크기를 바꿔보았습니다.
