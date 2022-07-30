@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>쇼핑몰</title>
+    <meta name="description" content="포트폴리오 사이트입니다" />
+    <meta name="keywords" content="포트폴리오 사이트입니다, 리액트, vanilaJs" />
+    <meta name="author" content="inpyo-kIm" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0 maximum-scale=1.0, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- open graph (facebook,linked in) -->
+    <meta property="og:type" content=""portfolio" />
+    <meta property="og:title" content="포트폴리오 사이트입니다." />
+    <meta property="og:description" content="포트폴리오 사이트입니다." />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://kipsportfoliosite.netlify.app/" />
+    <meta property="og:site_name" content="포트폴리오" />
+
+    <!-- twitter card (twitter) -->
+    <meta name="twitter:card" content="portfolio" />
+    <!-- card종류 -->
+    <meta name="twitter:title" content="포트폴리오 사이트입니다." />
+    <meta name="twitter:description" content="포트폴리오 사이트입니다." />
+    <meta name="twitter:image" content="portfolio" />
+    <meta name="twitter:url" content="https://kipsportfoliosite.netlify.app/" />
+    <meta name="twitter:creator" content="kiminpyo" />
+
+    <!-- 일반적인 fabicon설정 -->
+    <link rel="icon" href="" />
+
+    <!-- 아이폰용 fabicon -->
+    <link rel="apple-touch-icon" href="" />
+    <!-- 인터넷 익스폴로러용 fabicon -->
+    <link rel="short icon" type="image/x-icon" href="" />
+
+    <!-- css reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/f530febc22.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animation.css">
+  </head>
+  <body>
+    <!-- CSS 작명규칙 (BEM: Block Element Modifier) -->
+    <!-- -: 단어와 단어 사이에는 하이픈 (예 head-container-blue)
+     __: ~의 하위 요소 (예: head-container__head-brand)
+    -- : ~ 의 상태를 나타낼 때(예: head-container__head-brand--nolink)
+     대문자는 class에 쓰지말아라  -->
+    <header>
+      <div class="inner">
+        <div class="head-container">
+          <div class="head-brand">
+            <a href="">K I P</a>
+          </div>
+          <div class="head-fontsize" id="head-fontsize">
+            글씨 조절:
+            <div id="font10">작게</div>
+            <div id="font14">보통</div>
+            <div id="font20">확대</div>
+          </div>
+          <div id="darkmode">다크모드</div>
+          <div id="whitemode">화이트모드</div>
+          <div class="head-blog">
+            <a href="">portfolio</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- 메인 이미지 섹션 -->
+    <section class="main">
+      <div class="main-container">
+        <div class="inner">
+          <div class="title-container">
+            <div class="title">김인표입니다</div>
+            <div class="message">
+              프론트엔드 개발자입니다<br />
+              그리고
+              <span style="color: red">React</span>를 곁들인,<br />
+              HTML / CSS / JS
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--메인 섹션 -->
+    <section>
+      <div class="inner">
+        <div class="skill-container">
+          <div class="skill-title">
+            <div class="roadmap-title">사용할 수 있는 기술</div>
+            <br>
+          </div>
+          <div class="skill-wrapper"> 
+              <div class="skill">
+            <i class="fa-brands fa-react skill-icon skill-react"></i>
+            <div class="skill-title">
+              <div class="skill-name">React</div>
+              <div class="skill-usage">react/next/redux</div>
+            </div>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-html5 skill-icon skill-html"></i>
+            <div class="skill-title">
+              <div class="skill-name">Html5</div>
+              <div class="skill-usage">웹 표준을 지향</div>
+            </div>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-css3-alt skill-icon skill-css"></i>
+            <div class="skill-title">
+              <div class="skill-name">Css</div>
+              <div class="skill-usage"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-vuejs skill-icon skill-vue"></i>
+            <div class="skill-title">
+              <div class="skill-name">Libraray</div>
+              <div class="skill-usage">서브입니다</div>
+            </div>
+          </div>          
+          </div>
+        
+        </div>
+      </div>
+    </section>
+    <!-- 로드맵 섹션 -->
+    <section>
+      <div class="inner">
+        <div class="roadmap-container">
+          <div class="roadmap-title-container">
+            <div class="roadmap-title">포트폴리오</div>
+            <div class="arrow-container">
+              <!-- fontawesome ==inline-block -->
+              <i class="fa-solid fa-circle-arrow-left slide-prev"></i>
+              <i class="fa-solid fa-circle-arrow-right slide-next"></i>
+            </div>
+          </div>
+          <!-- HTML5에서는 data-변수이름=변수값 (특정태그에 변수값을 속성으로 넣고싶을 때)-->
+          <ul class="class-list" data-position="0">
+            
+            <li class="class-card">
+                <img
+                src="./img/lolbti.gif"
+                alt="포트폴리오"
+                class="class-image class-image-1"
+              />
+              <div class="class-container">
+                <div class="class-skill">
+                  <div class="class-type">학습방법</div>
+                  <div class="class-format"><a href="https://velog.io/@kip">블로그</a> </div>
+                </div>
+                <div class="class-desc">
+                  <a href="https://whatisyourlolbti.netlify.app/">
+                  <div class="class-title">
+                    바닐라Js로 작업한 프로젝트
+                  </div>
+                  <div class="class-detail">11가지 test로 알아보는 포지션</div>
+                </div>
+              </div>
+              </a>
+            
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+    </section>
+   
+    <!-- 로드맵 3 섹션 -->
+    <section>
+      <div class="inner">
+        <div class="roadmap-container">
+          <div class="roadmap-title-container">
+            <div class="roadmap-title">개발 시 도움이 되는 사이트</div>
+            <div class="arrow-container">
+              <!-- fontawesome ==inline-block -->
+              <i class="fa-solid fa-circle-arrow-left slide-prev"></i>
+              <i class="fa-solid fa-circle-arrow-right slide-next"></i>
+            </div>
+          </div>
+          <ul class="class-list">
+            <li class="class-card">
+              <img
+                src="./img/w3c school.png"
+                alt="w3cSchool"
+                class="class-image"
+              />
+              <div class="class-container">
+            
+                <div class="class-desc">
+                  <div class="class-title">
+                    w3c school
+                  </div>
+                  <div class="class-detail">최애 사이트입니다.</div>
+                </div>
+              </div>
+            </li>
+            <li class="class-card">
+              <img
+                src="./img/인프런.png"
+                alt="인프런"
+                class="class-image"
+              />
+              <div class="class-container">
+            
+                <div class="class-desc">
+                  <div class="class-title">
+                    inflearn
+                  </div>
+                  <div class="class-detail">제 코딩실력의 기반입니다.</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="inner">
+        <div class="roadmap-container">
+          <div class="roadmap-title-container"></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="inner">
+        <div class="footer-message">
+          제가 만든 포트폴리오들을 여기다 정리할 계획입니다.
+        </div>
+        <div class="footer-contact">contact: rladlsvy2448@naver.com</div>
+        <div class="fotter-copyright">Copryright 2020</div>
+      </div>
+    </footer>
+    <a id="backtotop"></a>
+    <!-- script -->
+    <!-- 해당 자바스크립트 문법이 동작할 수 있도록 환경을 바꿔준다. (ie11에서 문제가 ㅣㅇㅅ다.) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/mouseTouch.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/backtop.js"></script>
+  </body>
+</html>

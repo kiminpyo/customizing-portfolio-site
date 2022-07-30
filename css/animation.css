@@ -1,0 +1,12 @@
+@keyframes zoom{
+    from{
+        position: unset;
+        z-index: 999;
+    }to{
+        position: unset;
+        width: 320px;
+        height:260px;
+
+        z-index: 999;
+    }
+}
