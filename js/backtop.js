@@ -15,11 +15,14 @@ document.getElementById('font14').onclick = font14
 document.getElementById('font20').onclick = font20
 
 // 다크모드
+// const body = document.querySelector('body')
+// const bodyArr =  Array.from(body.children)
+//  bodyArr.filter((v,i)=> i <= 6? v : null).map(v=> v.style.background="black")
 
 function background(color){
 
    return function(){
-
+  
     const inner = document.getElementsByClassName('inner')
     const innerArr = Array.from(inner)
     const breakError ={}
