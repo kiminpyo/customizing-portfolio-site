@@ -46,10 +46,5 @@
 
 ![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/93189402/181909844-4475e1d8-a8a4-47ed-8a60-41ebf8d02589.gif)
 
----
 
-# 참고한 사이트
-
- 클론코딩을 기반으로 커스터마이징을 진행하였습니다.
- 사이트: https://www.inflearn.com/course/%ED%94%84%EB%9F%B0%ED%8A%B8%EC%97%94%EB%93%9C-%ED%92%80%EC%8A%A4%ED%83%9D-2/dashboard
 
