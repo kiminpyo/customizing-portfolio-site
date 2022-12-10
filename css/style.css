@@ -1,148 +1,167 @@
- *{
+* {
     box-sizing: border-box;
-
 }
 
-
-body{
+body {
     margin: 0 auto;
     color: #3f464d;
-    font-family: 'Noto Sans KR', sans-serif;
- 
+    font-family: "Noto Sans KR", sans-serif;
 }
-.inner{
-    width:100%;
+.inner {
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 0 2rem;
     /* 로드맵 이미지가 화면밖으로 늘어나느 것 */
     overflow: hidden;
-    
 }
 
-header{
-    
+header {
     width: 100%;
-    height:60px;
-    background-color:  #fff;
+    height: 60px;
+    background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
 }
-a{
-    all: unset
+a {
+    color: white;
 }
-a:link{
+a:link {
     text-decoration: none;
-    color: #3f464d;
 }
-a:visited{
+a:visited {
     text-decoration: none;
-    color: #3f464d;
+}
+a:hover {
+    color: rgba(139, 24, 24, 0.842);
 }
 
 section {
     width: 100%;
     background-color: #fff;
     position: relative;
-    height:100%;
+    height: 100%;
 }
-.head-container{
+.head-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.head-container .head-brand{
+.head-container .head-brand {
     font-weight: bold;
-    font-size: 1.2rem
+    font-size: 1.2rem;
 }
-.head-container .head-fontsize{
-    display:flex;
+.head-container .head-fontsize {
+    display: flex;
     align-items: center;
 }
-.head-fontsize , #font10, #font14, #font20{
+.head-fontsize,
+#font10,
+#font14,
+#font20 {
     padding: 0.5rem;
-
 }
 /* 전체 폰트 사이즈 조정 */
- #font10, #font14, #font20:hover{
+#font10,
+#font14,
+#font20:hover {
     cursor: pointer;
 }
-   /* 다크모드 */
-#darkmode:hover{
+/* 다크모드 */
+#darkmode:hover {
     cursor: pointer;
-    color:rgba(24, 24, 70, .2)
+    color: rgba(24, 24, 70, 0.2);
 }
 
-.head-container .head-brand a:hover{
+.head-container .head-brand a:hover {
     color: #2186c4;
     cursor: pointer;
-;
 }
-.head-container .head-blog{
-   
+.head-container .head-blog {
     font-weight: bold;
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    animation: swipe 0.5s linear infinite;
 }
 
-
+.head-introduce {
+    display: none;
+    position: absolute;
+    top: 50px;
+    font-size: 1.1rem;
+    right: 5%;
+    width: 40%;
+    overflow: auto;
+    height: 450px;
+    line-height: 1.5;
+    padding: 20px;
+    z-index: 999;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    animation: show 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+}
+.head-introduce-close {
+    text-align: end;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 .main {
     margin: auto;
-    width:100%;
-    height:360px;
-    background-image: url('../img//KakaoTalk_20220527_170318559.jpg'); 
-    background-size:cover;
+    width: 100%;
+    height: 360px;
+    background-image: url("../img//KakaoTalk_20220527_170318559.jpg");
+    background-size: cover;
     background-position: center 10%;
     z-index: 1;
-}   
+}
 
-.main-container{
-    width:100%;
+.main-container {
+    width: 100%;
     height: 100%;
-    background-color:rgba(101, 82, 209, 0.377);
+    background-color: rgba(101, 82, 209, 0.377);
     opacity: 0.8;
     z-index: 2;
     /* 헤더가 fixed라 그만큼 빼준다 */
-    margin-top:60px
+    margin-top: 60px;
 }
 
-.title-container{
+.title-container {
     padding-top: 100px;
-    padding-bottom:100px;
-
+    padding-bottom: 100px;
 }
-.title{
+.title {
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
     /* subText와의 간격 */
-    margin-bottom: 0.8rem
+    margin-bottom: 0.8rem;
 }
-.message{
+.message {
     font-weight: 200;
-    color:rgb(190, 188, 194);
-    line-height:1.5rem ;
+    color: rgb(190, 188, 194);
+    line-height: 1.5rem;
 }
 /* section -2 */
-.skill-container{
-    width:100%;
+.skill-container {
+    width: 100%;
     height: 100%;
     margin-top: 3rem;
-    padding: 1rem
-  
-    
+    padding: 1rem;
 }
-.skill-wrapper{
-    width:100%;
+.skill-wrapper {
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content:  space-around;
+    justify-content: space-around;
     align-items: center;
 }
-.skill{
+.skill {
     /* 4개 */
     width: 25%;
     display: flex;
@@ -152,203 +171,202 @@ section {
     /* 위&아래 // 좌&우 */
     padding: 0.5rem 1rem;
     margin: 0 1rem;
-    box-shadow: 12px 12px 2px -5px rgba(0, 0, 255, .2);
+    box-shadow: 12px 12px 2px -5px rgba(0, 0, 255, 0.2);
     transition: 0.4s;
 }
-.skill:hover{
-    transform: translate(0,-5px);
+.skill:hover {
+    transform: translate(0, -5px);
 }
-.skill-icon{
+.skill-icon {
     font-size: 2.5rem;
     margin: 0 7px;
 }
-.skill-title{
-  
+.skill-title {
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
-.skill-name{
+.skill-name {
     font-weight: bold;
     margin-bottom: 0.3rem;
 }
-.skill-usage{
+.skill-usage {
     font-size: 0.9rem;
-    color:#545e6f;
-
+    color: #545e6f;
 }
 .skill-react {
-    color:rgba(90, 190, 221, 0.685)
+    color: rgba(90, 190, 221, 0.685);
 }
-.skill-html{
-    color:rgb(223, 105, 51)
+.skill-html {
+    color: rgb(223, 105, 51);
 }
-.skill-css{
+.skill-css {
     color: rgba(26, 26, 245, 0.938);
 }
-.skill-vue{
+.skill-vue {
     color: rgba(19, 129, 19, 0.822);
 }
 /* section 3 */
-.roadmap-container{
-    width:100%;
+.roadmap-container {
+    width: 100%;
     margin-top: 3rem;
 }
-.roadmap-title-container{
+.roadmap-title-container {
     margin-bottom: 1rem;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.roadmap-title{
+.roadmap-title {
     margin-left: 1rem;
     font-size: 1.3rem;
     font-weight: bold;
-    color: #545e6f
-
+    color: #545e6f;
 }
-.arrow-container{
+.arrow-container {
     margin-right: 1rem;
 }
-.slide-prev{
-
+.slide-prev {
     cursor: pointer;
     font-size: 1.8rem;
-
 }
-.slide-next{
+.slide-next {
     cursor: pointer;
     font-size: 1.8rem;
-    color: #84a0bd
-
+    color: #84a0bd;
 }
-.slide-prev-hover:hover{
-    transition:  transform 0.5s ;
+.slide-prev-hover:hover {
+    transition: transform 0.5s;
     cursor: pointer;
     font-size: 1.8rem;
     transform: translateX(-2px);
-
 }
-.slide-next-hover:hover{
-    transition:  transform 0.5s ;
+.slide-next-hover:hover {
+    transition: transform 0.5s;
     transform: translateX(2px);
 }
 
-.class-list{
-    width:100%;
+.class-list {
+    width: 100%;
     display: flex;
     /* list-style없애도 점이있던 위치는 있어서 패딩과 마진 고려 */
     list-style: none;
-    padding:1rem;
+    padding: 1rem;
     margin: 0;
-    overflow:none;
-  
+    overflow: none;
 }
-.class-card{
-    width:240px;
-    box-shadow: 10px 10px 2px -5px rgba(0, 0, 255, .2);
+.class-card {
+    width: 240px;
+    box-shadow: 10px 10px 2px -5px rgba(0, 0, 255, 0.2);
     border-radius: 8px;
     margin: 0 10px;
     transition: 0.4s;
     /* ? */
     flex-shrink: 0;
 }
-.class-card:hover{
-    box-shadow: 10px 10px 10px 0px rgba(24, 24, 70, .2);
-    transform: translate(0,-10px);
+.class-card:hover {
+    box-shadow: 10px 10px 10px 0px rgba(24, 24, 70, 0.2);
+    transform: translate(0, -10px);
 }
-.class-image{
+.class-image {
     width: 100%;
     height: 140px;
     /* 좌상 우상 우하 좌하 */
-    border-radius: 8px 8px 0 0 ;
+    border-radius: 8px 8px 0 0;
 }
-.class-card:hover{
+.class-card:hover {
     animation: zoom 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
-.class-container{
-    width:100%;
+.class-container {
+    width: 100%;
     padding: 0.5rem 1rem 1rem 1rem;
 }
-.class-skill{
-    display:flex;
-    justify-content: space-between;
+.class-skill {
+    display: flex;
+
     align-items: center;
 }
-.class-type{
+.class-type {
     font-size: 0.9rem;
     color: #949393;
 }
-.class-format{
+.class-format {
+    width: 50px;
+    height: 25px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
     text-decoration: none;
     font-size: 0.9rem;
     color: #fff;
-    background-color: #2186c4;
+    background-color: #000000;
+    border-radius: 10px;
 }
-.class-format:hover{
+.class-format:hover {
     cursor: pointer;
-   background-color: red;
+    background-color: rgba(30, 30, 31, 0.269);
 }
-.class-desc{
-    width:100%;
+.class-desc {
+    width: 100%;
     margin-top: 1rem;
     color: #545e6f;
 }
-.class-desc:hover{
-    color: #2186c4
+.class-desc:hover {
+    color: #2186c4;
 }
-.class-title{
-    /* 위의 desc의 color를 상속 */
+.class-title {
+    /* 위의 desc의 color를#27495f59
     color: inherit;
     font-weight: bold;
     /*  바꿈 방지 */
+    font-weight: bold;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 0.5rem;
 }
-.class-detail{
-        /* 위의 desc의 color를 상속 */
+.class-detail {
+    /* 위의 desc의 color를 상속 */
     color: inherit;
     font-size: 0.9rem;
 }
-footer{
-    border-top: 1px solid #e4e4e4 ;
+footer {
+    border-top: 1px solid #e4e4e4;
     background-color: #f8f9fa;
-    padding: 1rem 0 ;
-    margin: 1rem  0;
+    padding: 1rem 0;
+    margin: 1rem 0;
 }
-.footer-message{
+.footer-message {
     font-weight: bold;
     font-size: 0.9rem;
     margin: 0.3rem 0;
 }
-.footer-contact{
+.footer-contact {
     font-size: 0.9rem;
     margin: 0.3rem 0;
 }
-.footer-copyright{
+.footer-copyright {
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
 
-#backtotop{
-    background-color: rgb(47,48,89);
+#backtotop {
+    background-color: rgb(47, 48, 89);
     width: 40px;
     height: 40px;
     text-align: center;
     /* border-radius를 width와 heigth의 중간값으로 하면 원이된다*/
-    border-radius: 20px; 
+    border-radius: 20px;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    transition-property: background-color, opacity,visibility;
-    transition-duration:  0.3s , 0.5s, 0.5s;
+    transition-property: background-color, opacity, visibility;
+    transition-duration: 0.3s, 0.5s, 0.5s;
     opacity: 0;
     visibility: hidden;
     z-index: 999;
@@ -357,65 +375,63 @@ footer{
 1. ::after (요소 뒤에 content추가) 가상 요소에서,
 2. content: "폰트어썸 유니코드" 넣고,
 3. font-family : FontAwesome 이라고 넣으면 됨*/
-#backtotop::after{
- content: "\f077";
- font-family: FontAwesome;
- font-size: 1.5rem;
- /* line-height는 height값으로 쓰면 중앙으로 된다. */
- line-height: 40px;
- color: #fff
+#backtotop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    /* line-height는 height값으로 쓰면 중앙으로 된다. */
+    line-height: 40px;
+    color: #fff;
 }
-#backtotop.show{
+#backtotop.show {
     opacity: 1;
     visibility: visible;
-    background-color: red
+    background-color: red;
 }
-#backtotop.show:hover{
+#backtotop.show:hover {
     cursor: pointer;
     background-color: #333;
 }
 /* drag할수 있는 아이템임을 나타내는 표시를 포인터로 변경 */
-ul li img:hover{
+ul li img:hover {
     cursor: grab;
 }
 /* dragging 중인 상태에서 잡는 표시를 포인터로 변경 */
-ul li img:active{
+ul li img:active {
     cursor: grabbing;
 }
-@media only screen and (min-width: 1200px){
-    .inner, .main{
-       width: 80%;
-       
+@media only screen and (min-width: 1200px) {
+    .inner,
+    .main {
+        width: 80%;
     }
 }
-@media only screen and (max-width: 1200px){
-    .skill-wrapper{
+@media only screen and (max-width: 1200px) {
+    .skill-wrapper {
         display: flex;
         flex-wrap: wrap;
     }
-    .skill{
-    margin-bottom: 1rem;
-    width: 80%;
-    flex-direction: row
+    .skill {
+        margin-bottom: 1rem;
+        width: 80%;
+        flex-direction: row;
     }
 }
 
-@media only screen and (max-width: 480px){
-    section>.inner{
-        padding:0;
+@media only screen and (max-width: 480px) {
+    section > .inner {
+        padding: 0;
     }
-    .skill-container{
-   display: none;
-    }
-    #head-fontsize{
+    .skill-container {
         display: none;
     }
-    .head-blog{
+    #head-fontsize {
         display: none;
     }
-    #darkmode{
+    .head-blog {
+        display: none;
+    }
+    #darkmode {
         margin-left: 5rem;
     }
-    
-    
 }
